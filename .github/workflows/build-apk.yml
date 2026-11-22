@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Add Android platform
-        run: npx cap add android
+        run: npx --yes @capacitor/cli add android
 
       - name: Copy game icons
         run: |
@@ -36,7 +36,8 @@ jobs:
           done
 
       - name: Sync web assets
-        run: npx cap sync android
+        run: npx --yes @capacitor/cli sync android
+
 
       - name: Build debug APK
         run: cd android && chmod +x gradlew && ./gradlew assembleDebug
