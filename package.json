@@ -1,0 +1,28 @@
+{
+  "name": "neon-arena-windows",
+  "version": "1.0.0",
+  "description": "Neon Arena - 3D action game (online)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.arenaneon.game",
+    "productName": "آرنای نئون",
+    "win": {
+      "icon": "icon.ico",
+      "target": ["nsis", "portable"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "آرنای نئون"
+    }
+  }
+}
